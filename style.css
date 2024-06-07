@@ -1,0 +1,376 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* 기본 스타일 */
+body {
+    font-family: "Noto Sans KR", sans-serif;
+    font-size: x-large;
+    font-weight: bold;
+    background-image: url('./mainImg.jpg');
+    background-size: 2000px 1500px;
+    background-repeat: no-repeat;
+    background-position: top;
+    background-color: white;
+}
+
+
+
+
+/* 공통 텍스트 스타일 */
+.header,
+.item-title,
+#enchanceRate,
+#enhanceButton,
+#clubEnchanceRate,
+#clubEnhanceButton,
+#resetClubEnhanceButton, .footer h3 {
+    font-family: "Noto Sans KR", sans-serif;
+    font-size: x-large;
+    font-weight: bold;
+}
+
+/* 공통 버튼 스타일 */
+button,
+.btn-primary,
+.btn-secondary,
+.rating-form-table button[type="button"],
+.delete-comment {
+    padding: 10px 20px;
+    background-color: #3f51b5 !important;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: none;
+}
+
+button:hover,
+.btn-primary:hover,
+.btn-secondary:hover,
+.rating-form-table button[type="button"]:hover,
+.delete-comment:hover {
+    background-color: rgb(22, 22, 97);
+}
+
+.delete-comment:active {
+    transform: scale(1);
+}
+
+
+/* 공통 컨테이너 스타일 */
+.container,
+#dexPageId,
+.footer,
+.dex-details {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    margin-top: 100px;
+}
+
+/* 헤더 스타일 */
+.header {
+    background-color: #3f51b5;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+/* 네비게이션 스타일 */
+.nav {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.nav a {
+    padding: 10px 20px;
+    background-color: #3f51b5;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin: 0 10px;
+}
+
+.nav a:hover {
+    background-color: rgb(22, 22, 97);
+    color: white;
+
+}
+
+.nav a:active,
+.nav a.active {
+    background-color: rgb(22, 22, 97);
+    color: white;
+}
+
+
+/* 버튼 스타일 (GG, DD, clubEnhance) */
+#GG,
+#DD,
+#clubEnhance {
+    width: 200px;
+    height: 80px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+    line-height: 60px;
+    font-size: x-large;
+    font-weight: bold;
+}
+
+#GG {
+    margin: 30px 30px -70px 10px;
+}
+
+#DD {
+    margin: 30px 10px -70px 30px;
+}
+
+#clubEnhance {
+    margin: 30px 40px -70px 40px;
+}
+
+/* 아이템 이미지 컨테이너 스타일 */
+.item-image-container {
+    position: relative;
+    width: 30%;
+    padding-top: 30%;
+    overflow: hidden;
+    border-radius: 10px;
+    background-color: rgb(249, 249, 249);
+    margin: 0 auto;
+    max-height: calc(100vh - 80px);
+}
+
+.item-image {
+    width: 300px;
+    height: 400px;
+    object-fit: contain;
+    margin: 0 auto;
+    display: block;
+}
+
+/* 텍스트 스타일 */
+#attackPower{
+    font-size: large;
+}
+
+#successRate{
+    font-size: 24px;
+}
+#failureRate{
+    font-size: 24px;
+}
+
+#clubAttackPower{
+    font-size: large
+}
+#clubSuccessRate{
+    font-size: 24px;
+}
+#clubFailureRate {
+    font-size: 24px;
+}
+
+.pp {
+    flex-direction: column;
+    margin-left: 430px;
+}
+
+.success-text,
+.failure-text {
+    color: #3f51b5;
+}
+
+/* 별점 스타일 */
+#myform fieldset {
+    display: flex;
+    justify-content: center;
+    direction: rtl;
+    border: 0;
+    text-align: center;
+}
+
+#myform fieldset legend {
+    text-align: center;
+}
+
+#myform input[type=radio] {
+    display: none;
+}
+
+#myform label {
+    font-size: 1em;
+    color: transparent;
+    text-shadow: 0 0 0 #f0f0f0;
+}
+
+#myform label:hover,
+#myform label:hover~label,
+#myform input[type=radio]:checked~label {
+    text-shadow: 0 0 0#3f51b5;
+}
+
+/* 별표 스타일링 */
+.star {
+    color:  #3f51b5; /* 별표 색상 설정 */
+}
+
+/* 푸터 스타일 */
+.footer {
+    padding: 20px;
+}
+
+#average-rating {
+    text-align: center;
+}
+
+/* 평가 및 리뷰 스타일 */
+.rating-form-table {
+    width: 100%;
+}
+
+.rating-form-table input[type="text"],
+.rating-form-table textarea {
+    width: 25%;
+    padding: 8px;
+    margin: 5px 0;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.rating-form-table textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    resize: none;
+    height: 100px;
+}
+
+.rating-form-table button[type="button"] {
+    padding: 10px 20px;
+}
+
+#comments-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+#comments-list li {
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+#comments-list li span.comment-name {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+#comments-list li span.comment-time {
+    color: #666;
+    font-size: 12px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+#comments-list li span.comment-text {
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* 댓글 삭제 버튼 스타일 */
+.delete-comment {
+    padding: 5px 10px;
+}
+
+.delete-comment:hover {
+    transform: scale(1.1);
+}
+
+/* 도감 페이지 스타일 */
+#dexPageId {
+    display: none;
+}
+
+.dex-container {
+    display: flex;
+    justify-content: center;
+}
+
+.dex-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    margin: 10px;
+    width: 200px;
+    height: 300px;
+    pointer-events: none;
+    opacity: 0.5;
+    transition: none;
+}
+
+.dex-item img {
+    width: 100%;
+    height: auto;
+}
+
+.dex-item h3 {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.dex-item.active {
+    pointer-events: auto;
+    opacity: 1;
+    cursor: pointer;
+}
+
+.dex-item.active:hover {
+    background-color: #f0f0f0;
+    transform: scale(1.05);
+}
+
+.dex-details {
+    padding: 20px;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.dex-details img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* 코멘트 텍스트 스타일 */
+.comment-text {
+    display: block;
+    margin-top: 5px;
+    font-size: 1em;
+
+}
+
+/* 이름과 시간 텍스트 스타일 */
+.comment-name-time {
+    display: inline;
+    color: #555;
+    font-size: 0.5em;
+    margin-right: 10px;
+}
+
+.comment-name {
+    font-weight: bold;
+}
+
+.comment-time {
+    color: #999;
+}
